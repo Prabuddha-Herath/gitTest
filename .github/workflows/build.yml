@@ -1,7 +1,7 @@
 name: Build APK
 
 on:
-  workflow_dispatch:   # run manually from GitHub Actions tab
+  workflow_dispatch:   # Run manually from GitHub Actions tab
 
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
           buildozer android debug
 
       - name: Upload APK artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: medical-reminder-apk
           path: bin/*.apk
